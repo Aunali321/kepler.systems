@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-one);
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+    background-color: var(--bg-color);
+}
+
+html,
+body {
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.wrapper {
+    margin-inline: auto;
+    width: min(90%, 60rem) !important;
+}
+
+:root {
+    --white: #aca1cb;
+    --white-two: #7f7796;
+    --purple: #835fe8;
+    --purple-two: #494d86;
+    --purple-low-opacity: rgba(187, 163, 255, 0.36);
+    --purple-low-opacity-two: rgba(187, 163, 255, 0.2);
+    --purple-border: rgba(140, 98, 255, 0.2);
+    --purple-border-two: rgba(140, 98, 255, 0.3);
+    --bg-color: #030713;
+    --neutral-one: #28214b6e;
+    --neutral-two: #101024;
+    --neutral-three: #040711;
+    --font-one: "Chakra Petch", sans-serif;
+    --font-two: "Space Mono", monospace;
+}
+
+::selection {
+    background: var(--purple-low-opacity-two);
+}
+
+h1 {
+    color: var(--purple);
+    font-weight: 600;
+    letter-spacing: -0.055em;
+    line-height: 101.6%;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    text-shadow: 0px 0px 71px var(--purple-low-opacity);
+}
+
+h2 {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    width: fit-content;
+    text-align: left;
+}
+
+h3 {
+    color: var(--purple-two);
+    font-weight: 600;
+    font-size: 2.5rem;
+    letter-spacing: -0.06em;
+}
+
+p {
+    font-family: var(--font-two);
+    letter-spacing: -0.04em;
+    line-height: 1.5rem;
+    color: var(--white-two);
+    font-weight: 300;
+    font-size: 0.95rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 11px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--neutral-one);
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--purple);
+}

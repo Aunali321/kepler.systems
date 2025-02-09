@@ -13,7 +13,7 @@
 </script>
 
 <svelte:head>
-	<title>Kepler Systems - Advanced AI Solutions</title>
+	<title>Kepler Systems</title>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Kepler Systems" />
 	<meta
@@ -102,7 +102,7 @@
 					<h3>UrduShers-10k</h3>
 					<p>Curated collection of classical Urdu poetry couplets</p>
 					<ul class="feature-list">
-						<li>10,000 annotated shers</li>
+						<li>10,000 shers</li>
 						<li>Multiple poets and eras</li>
 						<li>Quality validated</li>
 						<li>CC BY-SA 4.0 license</li>
@@ -128,8 +128,7 @@
 					<p>Comprehensive dataset of Urdu ghazals with metadata</p>
 					<ul class="feature-list">
 						<li>25,000 complete ghazals</li>
-						<li>Rich metadata included</li>
-						<li>Multiple dialects</li>
+						<li>Multiple poets and eras</li>
 						<li>CC BY-SA 4.0 license</li>
 					</ul>
 					<div class="tags">

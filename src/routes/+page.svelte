@@ -21,12 +21,18 @@
 		content="Building the future of AI through collaborative research, shared datasets, and open-source models."
 	/>
 	<meta property="og:url" content="https://kepler.systems" />
-	<!-- <meta property="og:image" content="https://kepler.systems/og-image.jpg" /> -->
+	<meta property="og:image" content="https://kepler.systems/logo.png" />
 	<script
 		defer
 		src="http://diy-umami-ea3a6e-38-45-66-239.traefik.me/script.js"
 		data-website-id="c2811ea4-cc1f-4b5b-ad40-8cd7b4ed02a3"
 	></script>
+
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="manifest" href="/site.webmanifest" />
 </svelte:head>
 
 <main>

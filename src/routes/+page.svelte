@@ -1,364 +1,552 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	let glowCanvas: HTMLCanvasElement;
+	import Chip from '$lib/components/Chip.svelte';
 
-	onMount(() => {
-		const ctx = glowCanvas.getContext('2d');
-		const width = glowCanvas.width = window.innerWidth;
-		const height = glowCanvas.height = window.innerHeight;
+	let isIntersecting = false;
 
-		function drawGlow() {
-			ctx.clearRect(0, 0, width, height);
-			const gradient = ctx.createRadialGradient(
-				width/2, height/2, 0,
-				width/2, height/2, width/2
-			);
-			gradient.addColorStop(0, 'rgba(0, 255, 255, 0.1)');
-			gradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.05)');
-			gradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
-			
-			ctx.fillStyle = gradient;
-			ctx.fillRect(0, 0, width, height);
-			requestAnimationFrame(drawGlow);
-		}
-
-		drawGlow();
-	});
+	function handleIntersection(entries) {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				isIntersecting = true;
+			}
+		});
+	}
 </script>
 
 <svelte:head>
-	<title>Kepler Systems | Next-Generation AI</title>
-	<meta name="description" content="Pioneering the future of artificial intelligence" />
+	<title>Kepler Systems - Advanced AI Solutions</title>
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Kepler Systems" />
+	<meta
+		property="og:description"
+		content="Building the future of AI through collaborative research, shared datasets, and open-source
+			models."
+	/>
+	<meta property="og:url" content="." />
 </svelte:head>
 
 <main>
-	<canvas bind:this={glowCanvas} class="glow-effect"></canvas>
-	<div class="noise-overlay"></div>
+	<div class="background-grid"></div>
 
-	<nav>
+	<nav class="wrapper nav-container">
 		<div class="logo">K</div>
 		<div class="nav-links">
-			<a href="#about">About</a>
-			<a href="#contact" class="contact-btn">Contact</a>
+			<a href="#products">Works</a>
+			<a href="#contact">Contact</a>
 		</div>
 	</nav>
 
-	<section class="hero">
-		<div class="hero-content">
-			<div class="hero-text">
-				<h1>kepler<span class="accent">.</span>systems</h1>
-				<p class="tagline">Pioneering the next wave of artificial intelligence</p>
+	<section class="hero-section wrapper">
+		<div class="orbital-system">
+			<div class="orbit orbit-1"></div>
+			<div class="orbit orbit-2"></div>
+			<div class="orbit orbit-3"></div>
+		</div>
+		<h1>kepler.systems</h1>
+		<p class="hero-text">We build AI and share what works</p>
+		<div class="hero-chips">
+			<Chip name="Neural Networks" />
+			<Chip name="Deep Learning" />
+			<Chip name="AI Systems" />
+		</div>
+	</section>
+
+	<section id="products" class="wrapper products-section">
+		<div class="section-header">
+			<span class="section-label">Open Research</span>
+			<h2>Datasets & Models</h2>
+			<p class="subtitle">Latest Work: Bringing AI to the Art of Urdu Poetry</p>
+		</div>
+
+		<div class="products-grid">
+			<div class="product-card featured">
+				<div class="product-content">
+					<div class="product-icon">🤖</div>
+					<h3>Poetry Llama</h3>
+					<p>
+						State-of-the-art large language model fine-tuned for Urdu poetry understanding and
+						generation
+					</p>
+					<ul class="feature-list">
+						<li>70 billion parameters</li>
+						<li>Trained on diverse Urdu poetry</li>
+						<li>Llama license</li>
+					</ul>
+					<div class="tags">
+						<Chip name="LLM" />
+						<Chip name="Open Source" />
+						<Chip name="Urdu" />
+					</div>
+					<a
+						href="https://huggingface.co/keplersystems/poetry-llama-3.3-70B"
+						class="hf-link"
+						target="_blank"
+					>
+						View on Hugging Face 🤗
+					</a>
+				</div>
+				<div class="product-stats">
+					<div class="stat">
+						<span class="value">70B</span>
+						<span class="label">Parameters</span>
+					</div>
+					<div class="stat">
+						<span class="value">7M</span>
+						<span class="label">Tokens</span>
+					</div>
+				</div>
 			</div>
-			<div class="hero-visual">
-				<div class="orbital-ring"></div>
-				<div class="orbital-ring ring-2"></div>
-				<div class="orbital-ring ring-3"></div>
-				<div class="core-letter">K</div>
+
+			<div class="product-card">
+				<div class="product-content">
+					<div class="product-icon">📚</div>
+					<h3>UrduShers-10k</h3>
+					<p>Curated collection of classical Urdu poetry couplets</p>
+					<ul class="feature-list">
+						<li>10,000 annotated shers</li>
+						<li>Multiple poets and eras</li>
+						<li>Quality validated</li>
+						<li>CC BY-SA 4.0 license</li>
+					</ul>
+					<div class="tags">
+						<Chip name="Dataset" />
+						<Chip name="Poetry" />
+					</div>
+					<a
+						href="https://huggingface.co/datasets/keplersystems/UrduShers-10k"
+						class="hf-link"
+						target="_blank"
+					>
+						View on Hugging Face 🤗
+					</a>
+				</div>
+			</div>
+
+			<div class="product-card">
+				<div class="product-content">
+					<div class="product-icon">📖</div>
+					<h3>UrduGhazals-25k</h3>
+					<p>Comprehensive dataset of Urdu ghazals with metadata</p>
+					<ul class="feature-list">
+						<li>25,000 complete ghazals</li>
+						<li>Rich metadata included</li>
+						<li>Multiple dialects</li>
+						<li>CC BY-SA 4.0 license</li>
+					</ul>
+					<div class="tags">
+						<Chip name="Dataset" />
+						<Chip name="Literature" />
+					</div>
+					<a
+						href="https://huggingface.co/datasets/keplersystems/UrduGhazals-25k"
+						class="hf-link"
+						target="_blank"
+					>
+						View on Hugging Face 🤗
+					</a>
+				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="focus-areas">
-		<div class="container">
-			<div class="focus-card">
-				<div class="card-content">
-					<div class="icon">🧠</div>
-					<h3>Language Models</h3>
-					<p>Advanced natural language processing systems</p>
-				</div>
-				<div class="card-border"></div>
-			</div>
+	<section class="wrapper coming-soon-section">
+		<div class="section-header">
+			<span class="section-label">Coming Soon</span>
+			<h2>Future Developments</h2>
+			<p class="subtitle">Stay tuned for upcoming research and technology updates</p>
+		</div>
 
-			<div class="focus-card">
-				<div class="card-content">
-					<div class="icon">🔊</div>
-					<h3>Speech Systems</h3>
-					<p>Next-generation voice synthesis technology</p>
+		<div class="coming-soon-card">
+			<div class="card-content">
+				<span class="icon">🔬</span>
+				<h3>Research & Technology</h3>
+				<p>
+					We're working on exciting new developments in AI research and technology. Follow us on
+					social media to stay updated.
+				</p>
+				<div class="tags">
+					<Chip name="Research" />
+					<Chip name="Technology" />
+					<Chip name="Updates" />
 				</div>
-				<div class="card-border"></div>
-			</div>
-
-			<div class="focus-card">
-				<div class="card-content">
-					<div class="icon">👁️</div>
-					<h3>Computer Vision</h3>
-					<p>Cutting-edge visual processing solutions</p>
-				</div>
-				<div class="card-border"></div>
 			</div>
 		</div>
 	</section>
 
-	<footer>
-		<div class="container">
-			<p>© 2025 Kepler Systems</p>
-			<a href="mailto:hello@auna.li" class="contact-link">hello@auna.li</a>
+	<footer id="contact" class="wrapper footer">
+		<div class="footer-content">
+			<div class="footer-section">
+				<h4>Kepler Systems</h4>
+				<p>Dedicated to fundamental AI research and development.</p>
+			</div>
+			<div class="footer-section">
+				<h4>Contact</h4>
+				<a href="mailto:contact@kepler.systems">contact@kepler.systems</a>
+			</div>
+			<div class="footer-section">
+				<h4>Follow Us</h4>
+				<div class="social-links">
+					<a href="https://x.com/KeplerSystems" target="_blank">X / Twitter</a>
+					<a href="https://huggingface.co/keplersystems" target="_blank">hugging Face</a>
+					<!-- <a href="#" target="_blank">GitHub</a> -->
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2025 Kepler Systems. All rights reserved.</p>
 		</div>
 	</footer>
 </main>
 
 <style lang="scss">
 	:root {
-		--bg: #000810;
-		--primary: #00ffff;
-		--primary-dark: #00a3a3;
-		--accent: #ff3d71;
-		--text: #e0ffff;
-		--text-secondary: #7fecec;
+		--primary: #00ffd5;
+		--primary-dark: #00b4a3;
+		--primary-light: #7fffef;
+		--accent: #ff00ee;
+		--accent-dark: #b400a7;
+		--bg-dark: #001a1a;
+		--bg-darker: #000d0d;
+		--text: #e0fffa;
+		--text-secondary: #7fffef;
 	}
 
 	main {
-		background: var(--bg);
+		background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
 		min-height: 100vh;
 		position: relative;
 		overflow: hidden;
 	}
 
-	.glow-effect {
+	.background-grid {
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
-		pointer-events: none;
+		right: 0;
+		bottom: 0;
+		background-image:
+			linear-gradient(rgba(0, 255, 213, 0.05) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(0, 255, 213, 0.05) 1px, transparent 1px);
+		background-size: 30px 30px;
 		z-index: 1;
+		pointer-events: none;
 	}
 
-	.noise-overlay {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%" height="100%" filter="url(%23noiseFilter)"/%3E%3C/svg%3E');
-		opacity: 0.05;
-		pointer-events: none;
+	.nav-container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 2rem 0;
+		position: relative;
 		z-index: 2;
 	}
 
-	.container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 0 2rem;
-		position: relative;
-		z-index: 3;
+	.logo {
+		font-size: 2rem;
+		color: var(--primary);
+		font-weight: bold;
+		text-shadow: 0 0 20px rgba(0, 255, 213, 0.5);
 	}
 
-	nav {
+	.nav-links {
 		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 2rem;
-		position: relative;
-		z-index: 3;
+		gap: 2rem;
 
-		.logo {
-			font-size: 2rem;
-			font-weight: bold;
-			color: var(--primary);
-			text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-		}
+		a {
+			color: var(--text);
+			text-decoration: none;
+			transition: color 0.3s ease;
 
-		.nav-links {
-			display: flex;
-			gap: 2rem;
-			align-items: center;
-
-			a {
-				color: var(--text);
-				text-decoration: none;
-				transition: color 0.3s ease;
-
-				&:hover {
-					color: var(--primary);
-				}
-			}
-
-			.contact-btn {
-				padding: 0.5rem 1.5rem;
-				border: 1px solid var(--primary);
-				border-radius: 4px;
-				transition: all 0.3s ease;
-
-				&:hover {
-					background: var(--primary);
-					color: var(--bg);
-				}
+			&:hover {
+				color: var(--primary);
 			}
 		}
 	}
 
-	.hero {
-		min-height: 80vh;
-		display: flex;
-		align-items: center;
+	.hero-section {
+		text-align: center;
+		padding: 8rem 0;
 		position: relative;
-		z-index: 3;
-	}
+		z-index: 2;
 
-	.hero-content {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 2rem;
-	}
-
-	.hero-text {
-		flex: 1;
-		
 		h1 {
 			font-size: 5rem;
-			color: var(--text);
-			margin-bottom: 1.5rem;
-			line-height: 1;
-			font-weight: 700;
-			letter-spacing: -0.02em;
-
-			.accent {
-				color: var(--accent);
-			}
+			color: var(--primary);
+			margin-bottom: 2rem;
+			text-shadow: 0 0 30px rgba(0, 255, 213, 0.3);
 		}
 
-		.tagline {
-			font-size: 1.5rem;
+		.hero-text {
 			color: var(--text-secondary);
-			max-width: 500px;
-			line-height: 1.4;
+			font-size: 1.4rem;
+			max-width: 800px;
+			margin: 0 auto 3rem;
+			line-height: 1.6;
+		}
+
+		.hero-chips {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+			margin-top: 2rem;
 		}
 	}
 
-	.hero-visual {
-		flex: 1;
-		position: relative;
-		height: 500px;
+	.orbital-system {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: -1;
 
-		.orbital-ring {
+		.orbit {
 			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 300px;
-			height: 300px;
 			border: 1px dashed var(--primary-dark);
 			border-radius: 50%;
 			animation: rotate 20s linear infinite;
 
-			&.ring-2 {
-				width: 400px;
-				height: 400px;
-				animation-duration: 25s;
+			&-1 {
+				width: 300px;
+				height: 300px;
+			}
+
+			&-2 {
+				width: 500px;
+				height: 500px;
 				animation-direction: reverse;
 			}
 
-			&.ring-3 {
-				width: 500px;
-				height: 500px;
-				animation-duration: 30s;
-			}
-		}
-
-		.core-letter {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--primary);
-            font-size: 4rem;
-            font-weight: bold;
-            text-shadow: 0 0 30px var(--primary);
-        }
-	}
-
-	.focus-areas {
-		padding: 6rem 0;
-		position: relative;
-		z-index: 3;
-
-		.container {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			gap: 2rem;
-
-			@media (max-width: 968px) {
-				grid-template-columns: 1fr;
+			&-3 {
+				width: 700px;
+				height: 700px;
 			}
 		}
 	}
 
-	.focus-card {
-		position: relative;
+	.section-header {
+		text-align: center;
+		margin-bottom: 4rem;
+
+		.section-label {
+			color: var(--accent);
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			font-size: 0.9rem;
+			display: block;
+			margin-bottom: 1rem;
+		}
+
+		h2 {
+			color: var(--primary);
+			font-size: 3rem;
+			margin-bottom: 1rem;
+		}
+
+		.subtitle {
+			color: var(--text-secondary);
+			font-size: 1.2rem;
+		}
+	}
+
+	.products-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+		margin-top: 2rem;
+	}
+
+	.product-card {
+		background: rgba(0, 255, 213, 0.05);
+		border: 1px solid var(--primary-dark);
+		border-radius: 12px;
 		padding: 2rem;
-		background: rgba(0, 255, 255, 0.03);
-		border-radius: 8px;
-		overflow: hidden;
 		transition: all 0.3s ease;
+
+		&.featured {
+			grid-column: 1 / -1;
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			gap: 2rem;
+		}
 
 		&:hover {
 			transform: translateY(-5px);
-
-			.card-border {
-				opacity: 1;
-			}
+			box-shadow: 0 10px 30px rgba(0, 255, 213, 0.1);
 		}
 
-		.card-content {
-			position: relative;
-			z-index: 2;
-		}
-
-		.icon {
+		.product-icon {
 			font-size: 2.5rem;
 			margin-bottom: 1.5rem;
 		}
 
 		h3 {
 			color: var(--primary);
-			font-size: 1.5rem;
+			font-size: 1.8rem;
 			margin-bottom: 1rem;
 		}
 
 		p {
-			color: var(--text-secondary);
+			color: var(--text);
+			margin-bottom: 1.5rem;
 			line-height: 1.6;
 		}
 
-		.card-border {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			border: 1px solid var(--primary);
-			border-radius: 8px;
-			opacity: 0;
-			transition: opacity 0.3s ease;
+		.feature-list {
+			list-style: none;
+			margin: 1.5rem 0;
+			padding: 0;
+
+			li {
+				color: var(--text-secondary);
+				margin-bottom: 0.5rem;
+				padding-left: 1.5rem;
+				position: relative;
+
+				&::before {
+					content: '→';
+					position: absolute;
+					left: 0;
+					color: var(--accent);
+				}
+			}
 		}
 	}
 
-	footer {
-		padding: 2rem 0;
-		border-top: 1px dashed var(--primary-dark);
-		position: relative;
-		z-index: 3;
+	.hf-link {
+		display: inline-block;
+		color: var(--accent);
+		text-decoration: none;
+		margin-top: 1rem;
+		transition: all 0.3s ease;
 
-		.container {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
+		&:hover {
+			color: var(--accent-dark);
+			transform: translateX(5px);
+		}
+	}
+
+	.product-stats {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 2rem;
+		padding: 2rem;
+		border-left: 1px dashed var(--primary-dark);
+
+		.stat {
+			text-align: center;
+
+			.value {
+				display: block;
+				font-size: 2.5rem;
+				color: var(--primary);
+				font-weight: bold;
+				margin-bottom: 0.5rem;
+			}
+
+			.label {
+				color: var(--text-secondary);
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+			}
+		}
+	}
+
+	.coming-soon-section {
+		margin-top: 8rem;
+	}
+
+	.coming-soon-card {
+		background: rgba(255, 0, 238, 0.05);
+		border: 1px solid var(--accent-dark);
+		border-radius: 12px;
+		padding: 3rem;
+		text-align: center;
+		transition: all 0.3s ease;
+		max-width: 800px;
+		margin: 0 auto;
+
+		&:hover {
+			transform: translateY(-5px);
+			background: rgba(255, 0, 238, 0.08);
+		}
+
+		.icon {
+			font-size: 4rem;
+			margin-bottom: 2rem;
+			display: block;
+		}
+
+		h3 {
+			color: var(--primary);
+			font-size: 2rem;
+			margin-bottom: 1.5rem;
 		}
 
 		p {
-			color: var(--text-secondary);
+			color: var(--text);
+			font-size: 1.2rem;
+			line-height: 1.6;
+			margin-bottom: 2rem;
 		}
 
-		.contact-link {
+		.tags {
+			display: flex;
+			gap: 1rem;
+			justify-content: center;
+		}
+	}
+
+	.footer {
+		margin-top: 8rem;
+		padding: 4rem 0 2rem;
+		border-top: 1px dashed var(--primary-dark);
+	}
+
+	.footer-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr 1fr;
+		gap: 4rem;
+		margin-bottom: 4rem;
+
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+			gap: 2rem;
+		}
+	}
+
+	.footer-section {
+		h4 {
 			color: var(--primary);
+			font-size: 1.2rem;
+			margin-bottom: 1rem;
+		}
+
+		p,
+		a {
+			color: var(--text-secondary);
 			text-decoration: none;
 			transition: color 0.3s ease;
 
 			&:hover {
-				color: var(--accent);
+				color: var(--primary);
 			}
+		}
+	}
+
+	.social-links {
+		display: flex;
+		gap: 1rem;
+	}
+
+	.footer-bottom {
+		text-align: center;
+		padding-top: 2rem;
+		border-top: 1px dashed var(--primary-dark);
+
+		p {
+			color: var(--text-secondary);
+			font-size: 0.9rem;
 		}
 	}
 
@@ -371,42 +559,21 @@
 		}
 	}
 
-	@media (max-width: 968px) {
-		.hero-content {
-			flex-direction: column;
-			text-align: center;
-			gap: 4rem;
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
 		}
 
-		.hero-text {
-			h1 {
-				font-size: 3.5rem;
-			}
-
-			.tagline {
-				margin: 0 auto;
-			}
+		.hero-section h1 {
+			font-size: 3rem;
 		}
 
-		.hero-visual {
-			height: 400px;
-		}
-	}
+		.product-card.featured {
+			grid-template-columns: 1fr;
 
-	@media (max-width: 640px) {
-		nav {
-			.nav-links {
-				gap: 1rem;
-			}
-		}
-
-		.hero-text {
-			h1 {
-				font-size: 2.5rem;
-			}
-
-			.tagline {
-				font-size: 1.2rem;
+			.product-stats {
+				border-left: none;
+				border-top: 1px dashed var(--primary-dark);
 			}
 		}
 	}

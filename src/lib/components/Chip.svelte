@@ -8,16 +8,18 @@
 
 <style lang="scss">
 	.chip {
-		font-family: var(--font-two);
-		letter-spacing: -0.06em;
+		background: rgba(0, 255, 213, 0.1);
+		border: 1px solid var(--primary-dark);
+		color: var(--primary);
+		border-radius: 4px;
+		padding: 0.5rem 1rem;
 		font-size: 0.875rem;
-		background-color: var(--neutral-one);
-		color: var(--white);
-		border-radius: 2px;
-		padding: 0.25rem 0.5rem;
-		display: flex;
-		gap: 0.1rem;
-		align-items: center;
-		max-height: 28px;
+		transition: all 0.3s ease;
+		margin: 0 0.5rem 0.5rem 0;
+
+		&:hover {
+			background: rgba(0, 255, 213, 0.15);
+			transform: translateY(-1px);
+		}
 	}
 </style>

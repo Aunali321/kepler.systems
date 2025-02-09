@@ -18,10 +18,10 @@
 	<meta property="og:title" content="Kepler Systems" />
 	<meta
 		property="og:description"
-		content="Building the future of AI through collaborative research, shared datasets, and open-source
-			models."
+		content="Building the future of AI through collaborative research, shared datasets, and open-source models."
 	/>
-	<meta property="og:url" content="." />
+	<meta property="og:url" content="https://kepler.systems" />
+	<!-- <meta property="og:image" content="https://kepler.systems/og-image.jpg" /> -->
 </svelte:head>
 
 <main>
@@ -191,6 +191,9 @@
 			</div>
 		</div>
 		<div class="footer-bottom">
+			<a style="color: var(--text-secondary); margin-bottom: 1rem;" href="https://auna.li"
+				>Built with ❤️ in India 🇮🇳 by Aunali
+			</a>
 			<p>&copy; 2025 Kepler Systems. All rights reserved.</p>
 		</div>
 	</footer>

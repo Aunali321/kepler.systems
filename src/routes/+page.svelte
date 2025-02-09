@@ -24,7 +24,7 @@
 	<meta property="og:image" content="https://kepler.systems/logo.png" />
 	<script
 		defer
-		src="http://diy-umami-ea3a6e-38-45-66-239.traefik.me/script.js"
+		src="https://analytics.auna.li/script.js"
 		data-website-id="c2811ea4-cc1f-4b5b-ad40-8cd7b4ed02a3"
 	></script>
 

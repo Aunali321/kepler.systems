@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Chip from '$lib/components/Chip.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 
 	let isIntersecting = false;
 
@@ -38,13 +39,7 @@
 <main>
 	<div class="background-grid"></div>
 
-	<nav class="wrapper nav-container">
-		<div class="logo">K</div>
-		<div class="nav-links">
-			<a href="#products">Works</a>
-			<a href="#contact">Contact</a>
-		</div>
-	</nav>
+	<Nav />
 
 	<section class="hero-section wrapper">
 		<div class="orbital-system">
@@ -65,17 +60,54 @@
 		<div class="section-header">
 			<span class="section-label">Open Research</span>
 			<h2>Datasets & Models</h2>
-			<p class="subtitle">Latest Work: Bringing AI to the Art of Urdu Poetry</p>
+			<p class="subtitle">Latest: Multilingual Rural India Journalism Datasets</p>
 		</div>
 
 		<div class="products-grid">
 			<div class="product-card featured">
 				<div class="product-content">
+					<div class="product-icon">🌾</div>
+					<h3>PAARI Datasets</h3>
+					<p>
+						Multilingual journalism datasets from the People's Archive of Rural India covering rural life and culture.
+					</p>
+					<ul class="feature-list">
+						<li>8 Indian languages: Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati, English</li>
+						<li>7,650 professional journalism articles</li>
+						<li>19.9M tokens with language-specific text normalization</li>
+						<li>Parquet format, ready for text generation and classification</li>
+					</ul>
+					<div class="tags">
+						<Chip name="Dataset" />
+						<Chip name="Multilingual" />
+						<Chip name="Open Access" />
+					</div>
+					<a href="/blog/introducing-paari-datasets" class="hf-link">
+						Read more →
+					</a>
+				</div>
+				<div class="product-stats">
+					<div class="stat">
+						<span class="value">8</span>
+						<span class="label">Languages</span>
+					</div>
+					<div class="stat">
+						<span class="value">7.6K</span>
+						<span class="label">Articles</span>
+					</div>
+					<div class="stat">
+						<span class="value">19.9M</span>
+						<span class="label">Tokens</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="product-card featured">
+				<div class="product-content">
 					<div class="product-icon">🤖</div>
 					<h3>Poetry Llama</h3>
 					<p>
-						State-of-the-art large language model fine-tuned for Urdu poetry understanding and
-						generation
+						Large language model fine-tuned for Urdu poetry understanding and generation
 					</p>
 					<ul class="feature-list">
 						<li>70 billion parameters</li>
@@ -109,9 +141,9 @@
 
 			<div class="product-card">
 				<div class="product-content">
-					<div class="product-icon">📚</div>
-					<h3>UrduShers-10k</h3>
-					<p>Curated collection of classical Urdu poetry couplets</p>
+				<div class="product-icon">📚</div>
+				<h3>UrduShers-10k</h3>
+				<p>Comprehensive collection of classical Urdu poetry couplets</p>
 					<ul class="feature-list">
 						<li>10,000 shers</li>
 						<li>Multiple poets and eras</li>
@@ -162,7 +194,7 @@
 		<div class="section-header">
 			<span class="section-label">Coming Soon</span>
 			<h2>Future Developments</h2>
-			<p class="subtitle">Stay tuned for upcoming research and technology updates</p>
+			<p class="subtitle">Stay tuned for upcoming releases and updates</p>
 		</div>
 
 		<div class="coming-soon-card">
@@ -186,7 +218,7 @@
 		<div class="footer-content">
 			<div class="footer-section">
 				<h4>Kepler Systems</h4>
-				<p>Dedicated to fundamental AI research and development.</p>
+				<p>Building AI research and open-source tools.</p>
 			</div>
 			<div class="footer-section">
 				<h4>Contact</h4>
@@ -196,15 +228,13 @@
 				<h4>Follow Us</h4>
 				<div class="social-links">
 					<a href="https://x.com/KeplerSystems" target="_blank">X / Twitter</a>
-					<a href="https://huggingface.co/keplersystems" target="_blank">hugging Face</a>
+					<a href="https://huggingface.co/keplersystems" target="_blank">Hugging Face</a>
 					<!-- <a href="#" target="_blank">GitHub</a> -->
 				</div>
 			</div>
 		</div>
 		<div class="footer-bottom">
-			<a style="color: var(--text-secondary); margin-bottom: 1rem;" href="https://auna.li"
-				>Built with ❤️ in India 🇮🇳 by Aunali
-			</a>
+			<a href="https://auna.li">Built with ❤️ in India 🇮🇳 by AunAli K.</a>
 			<p>&copy; 2025 Kepler Systems. All rights reserved.</p>
 		</div>
 	</footer>
@@ -242,37 +272,6 @@
 		background-size: 30px 30px;
 		z-index: 1;
 		pointer-events: none;
-	}
-
-	.nav-container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 2rem 0;
-		position: relative;
-		z-index: 2;
-	}
-
-	.logo {
-		font-size: 2rem;
-		color: var(--primary);
-		font-weight: bold;
-		text-shadow: 0 0 20px rgba(0, 255, 213, 0.5);
-	}
-
-	.nav-links {
-		display: flex;
-		gap: 2rem;
-
-		a {
-			color: var(--text);
-			text-decoration: none;
-			transition: color 0.3s ease;
-
-			&:hover {
-				color: var(--primary);
-			}
-		}
 	}
 
 	.hero-section {
@@ -556,10 +555,20 @@
 		text-align: center;
 		padding-top: 2rem;
 		border-top: 1px dashed var(--primary-dark);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5rem;
 
-		p {
+		p, a {
 			color: var(--text-secondary);
 			font-size: 0.9rem;
+			margin: 0;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: var(--primary);
 		}
 	}
 
@@ -573,10 +582,6 @@
 	}
 
 	@media (max-width: 768px) {
-		.nav-links {
-			display: none;
-		}
-
 		.hero-section h1 {
 			font-size: 3rem;
 		}

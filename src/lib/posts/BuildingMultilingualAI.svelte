@@ -14,6 +14,11 @@
 		content="Why Indian language AI matters and the unique challenges we face in creating inclusive language models."
 	/>
 	<meta property="og:type" content="article" />
+	<script
+		defer
+		src="https://analytics.auna.li/script.js"
+		data-website-id="c2811ea4-cc1f-4b5b-ad40-8cd7b4ed02a3"
+	></script>
 </svelte:head>
 
 <main>

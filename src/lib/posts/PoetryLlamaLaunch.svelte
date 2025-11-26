@@ -14,6 +14,11 @@
 		content="Exploring how we fine-tuned Llama 3.3 70B on classical Urdu poetry to create a specialized language model."
 	/>
 	<meta property="og:type" content="article" />
+	<script
+		defer
+		src="https://analytics.auna.li/script.js"
+		data-website-id="c2811ea4-cc1f-4b5b-ad40-8cd7b4ed02a3"
+	></script>
 </svelte:head>
 
 <main>

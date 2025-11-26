@@ -41,6 +41,11 @@
 		property="og:description"
 		content="Latest updates and insights from Kepler Systems on multilingual AI, datasets, and language models."
 	/>
+	<script
+		defer
+		src="https://analytics.auna.li/script.js"
+		data-website-id="c2811ea4-cc1f-4b5b-ad40-8cd7b4ed02a3"
+	></script>
 </svelte:head>
 
 <main>

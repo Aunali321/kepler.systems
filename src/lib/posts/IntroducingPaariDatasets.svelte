@@ -426,6 +426,11 @@
 		href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 		rel="stylesheet"
 	/>
+	<script
+		defer
+		src="https://analytics.auna.li/script.js"
+		data-website-id="c2811ea4-cc1f-4b5b-ad40-8cd7b4ed02a3"
+	></script>
 </svelte:head>
 
 <main>

@@ -25,7 +25,7 @@
 		en: '#F7DC6F'
 	};
 
-	// PAARI Dataset information from Hugging Face
+	// PARI Dataset information from Hugging Face
 	const datasetInfo = {
 		HI: {
 			name: 'Hindi',
@@ -285,15 +285,15 @@
 
 <svelte:head>
 	<title
-		>Introducing Curated PAARI Datasets: 8 Indian Languages for AI Research | Kepler Systems</title
+		>Introducing Curated PARI Datasets: 8 Indian Languages for AI Research | Kepler Systems</title
 	>
 	<meta
 		name="description"
-		content="Curated multilingual journalism datasets from PAARI covering Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati & English. 7,650+ articles, 19.9M tokens for AI research and language modeling."
+		content="Curated multilingual journalism datasets from PARI covering Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati & English. 7,650+ articles, 19.9M tokens for AI research and language modeling."
 	/>
 	<meta
 		name="keywords"
-		content="Indian languages dataset, multilingual AI, Hindi dataset, Urdu dataset, Punjabi dataset, Tamil dataset, Telugu dataset, Marathi dataset, Gujarati dataset, PAARI, rural India, journalism dataset, language modeling, text generation, LLM training"
+		content="Indian languages dataset, multilingual AI, Hindi dataset, Urdu dataset, Punjabi dataset, Tamil dataset, Telugu dataset, Marathi dataset, Gujarati dataset, PARI, rural India, journalism dataset, language modeling, text generation, LLM training"
 	/>
 	<meta name="author" content="Kepler Systems" />
 	<meta name="robots" content="index, follow" />
@@ -304,11 +304,11 @@
 	<meta property="og:url" content="https://kepler.systems/blog/introducing-paari-datasets" />
 	<meta
 		property="og:title"
-		content="Introducing Curated PAARI Datasets: 8 Indian Languages for AI Research"
+		content="Introducing Curated PARI Datasets: 8 Indian Languages for AI Research"
 	/>
 	<meta
 		property="og:description"
-		content="Curated multilingual journalism datasets from PAARI covering Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati & English. 7,650+ articles for AI research."
+		content="Curated multilingual journalism datasets from PARI covering Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati & English. 7,650+ articles for AI research."
 	/>
 	<meta property="og:site_name" content="Kepler Systems" />
 	<meta property="article:published_time" content="2025-11-25T00:00:00Z" />
@@ -323,11 +323,11 @@
 	<meta name="twitter:url" content="https://kepler.systems/blog/introducing-paari-datasets" />
 	<meta
 		name="twitter:title"
-		content="Introducing Curated PAARI Datasets: 8 Indian Languages for AI Research"
+		content="Introducing Curated PARI Datasets: 8 Indian Languages for AI Research"
 	/>
 	<meta
 		name="twitter:description"
-		content="Curated multilingual journalism datasets from PAARI covering Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati & English. 7,650+ articles for AI research."
+		content="Curated multilingual journalism datasets from PARI covering Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati & English. 7,650+ articles for AI research."
 	/>
 
 	<!-- Structured Data -->
@@ -335,7 +335,7 @@
 		{JSON.stringify({
 			"@context": "https://schema.org",
 			"@type": "BlogPosting",
-			"headline": "Introducing Curated PAARI Datasets: 8 Indian Languages for AI Research",
+			"headline": "Introducing Curated PARI Datasets: 8 Indian Languages for AI Research",
 			"description": "Curated multilingual journalism datasets from the People's Archive of Rural India across 8 Indian languages",
 			"author": {
 				"@type": "Organization",
@@ -348,7 +348,7 @@
 			},
 			"datePublished": "2025-11-25",
 			"dateModified": "2025-11-25",
-			"keywords": "Indian languages, datasets, NLP, multilingual, Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati, PAARI",
+			"keywords": "Indian languages, datasets, NLP, multilingual, Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati, PARI",
 			"articleSection": "Datasets",
 			"url": "https://kepler.systems/blog/introducing-paari-datasets",
 			"mainEntityOfPage": {
@@ -358,7 +358,7 @@
 			"about": [
 				{
 					"@type": "Dataset",
-					"name": "PAARI Multilingual Datasets",
+					"name": "PARI Multilingual Datasets",
 					"description": "Journalism articles from People's Archive of Rural India in 8 Indian languages",
 					"url": "https://huggingface.co/keplersystems",
 					"keywords": ["Hindi", "Urdu", "Punjabi", "Tamil", "Telugu", "Marathi", "Gujarati", "English", "Indian languages", "rural India"],
@@ -388,34 +388,34 @@
 			"mainEntity": [
 				{
 					"@type": "Question",
-					"name": "What languages are included in the PAARI datasets?",
+					"name": "What languages are included in the PARI datasets?",
 					"acceptedAnswer": {
 						"@type": "Answer",
-						"text": "The PAARI datasets include 8 Indian languages: Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati, and English. Together they contain 7,650 articles and 19.9M tokens."
+						"text": "The PARI datasets include 8 Indian languages: Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati, and English. Together they contain 7,650 articles and 19.9M tokens."
 					}
 				},
 				{
 					"@type": "Question",
-					"name": "How can I use the PAARI datasets?",
+					"name": "How can I use the PARI datasets?",
 					"acceptedAnswer": {
 						"@type": "Answer",
-						"text": "You can use the PAARI datasets for text generation, language modeling, text classification, cross-lingual research, cultural analysis, and training multilingual AI models. All datasets are available on Hugging Face and can be loaded using the datasets library."
+						"text": "You can use the PARI datasets for text generation, language modeling, text classification, cross-lingual research, cultural analysis, and training multilingual AI models. All datasets are available on Hugging Face and can be loaded using the datasets library."
 					}
 				},
 				{
 					"@type": "Question",
-					"name": "What is the source of the PAARI datasets?",
+					"name": "What is the source of the PARI datasets?",
 					"acceptedAnswer": {
 						"@type": "Answer",
-						"text": "The datasets are sourced from the People's Archive of Rural India (PAARI), a journalism platform documenting rural life, agriculture, social issues, and cultural stories across India."
+						"text": "The datasets are sourced from the People's Archive of Rural India (PARI), a journalism platform documenting rural life, agriculture, social issues, and cultural stories across India."
 					}
 				},
 				{
 					"@type": "Question",
-					"name": "Are the PAARI datasets free to use?",
+					"name": "Are the PARI datasets free to use?",
 					"acceptedAnswer": {
 						"@type": "Answer",
-						"text": "Yes, the PAARI datasets are freely available on Hugging Face for research and development purposes. Users should respect the original journalism attribution and cite PAARI when using the datasets."
+						"text": "Yes, the PARI datasets are freely available on Hugging Face for research and development purposes. Users should respect the original journalism attribution and cite PARI when using the datasets."
 					}
 				}
 			]
@@ -441,7 +441,7 @@
 	<div class="wrapper">
 		<div class="post-header">
 			<h1 class="post-title">
-				Introducing Curated PAARI Datasets: 8 Indian Languages for AI Research
+				Introducing Curated PARI Datasets: 8 Indian Languages for AI Research
 			</h1>
 			<p class="post-meta">November 26, 2025</p>
 			<p class="post-excerpt">
@@ -453,7 +453,7 @@
 		<article class="post-content">
 			<p>
 				We've released multilingual journalism datasets from the People's Archive of Rural India
-				(PAARI).
+				(PARI).
 			</p>
 
 			<!-- Hero Stats -->
@@ -484,7 +484,7 @@
 				datasets needed for training modern AI systems.
 			</p>
 
-			<p>These PAARI datasets help address this critical gap by providing:</p>
+			<p>These PARI datasets help address this critical gap by providing:</p>
 			<ul>
 				<li>
 					<strong>Authentic voices:</strong> Real journalism capturing rural India's stories, not synthetic
@@ -503,7 +503,7 @@
 				</li>
 			</ul>
 
-			<h2>What is PAARI?</h2>
+			<h2>What is PARI?</h2>
 			<p>
 				The People's Archive of Rural India documents the lives, cultures, and stories of rural
 				India through professional journalism. These stories, written in multiple Indian languages,
@@ -586,25 +586,54 @@
 			</ul>
 
 			<h2>License & Usage</h2>
-			<p>As stated by PAARI: <em>"All our content is, and will forever be free to consume."</em></p>
+			<p>
+				PARI Content is licensed under <a
+					href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					target="_blank"
+					rel="noopener noreferrer"
+					>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND
+					4.0)</a
+				>.
+			</p>
 
 			<p>
-				These datasets are freely available for research, commercial use, and educational purposes.
-				We encourage you to:
+				You're free to share and distribute with attribution. Commercial use and derivatives require
+				permission from PARI.
 			</p>
+
 			<ul>
 				<li>
-					<strong>Cite PAARI and this dataset</strong> when publishing research or building applications
-				</li>
-				<li>
-					<strong>Support PAARI's mission</strong> by becoming a volunteer or
-					<a href="https://ruralindiaonline.org" target="_blank" rel="noopener noreferrer"
-						>donating to fund their work</a
+					<a
+						href="https://ruralindiaonline.org/termsofservices"
+						target="_blank"
+						rel="noopener noreferrer">Terms of Service</a
 					>
 				</li>
 				<li>
-					<strong>Respect the journalism</strong> and maintain proper attribution to the original content
-					creators
+					<a href="https://ruralindiaonline.org/en/copyrights" target="_blank" rel="noopener noreferrer"
+						>Copyright Details</a
+					>
+				</li>
+				<li>Contact: contact@ruralindiaonline.org</li>
+			</ul>
+
+			<p>We encourage you to:</p>
+
+			<ul>
+				<li>Cite PARI and this dataset when publishing research or building applications</li>
+				<li>
+					Support PARI's mission by <a
+						href="https://ruralindiaonline.org/en/volunteer/"
+						target="_blank"
+						rel="noopener noreferrer">becoming a volunteer</a
+					>
+					or
+					<a href="https://ruralindiaonline.org/en/donate/" target="_blank" rel="noopener noreferrer"
+						>donating</a
+					> to fund their work
+				</li>
+				<li>
+					Respect the journalism and maintain proper attribution to the original content creators
 				</li>
 			</ul>
 
@@ -636,10 +665,10 @@ for article in dataset["train"]:
 			<p>If you use these datasets in your research, please cite:</p>
 
 			<pre><code
-					>@misc{'{'}paari-datasets-2025,
-    title={'{'}PAARI Multilingual Datasets{'}'},
+					>@misc{'{'}pari-datasets-2025,
+    title={'{'}PARI Multilingual Datasets{'}'},
     author={'{'}People's Archive of Rural India and Kepler Systems{'}'},
-    howpublished={'{'}\url{'{'}https://huggingface.co/keplersystems{'}'}{'}'}, 
+    howpublished={'{'}\url{'{'}https://huggingface.co/keplersystems{'}'}{'}'},
     year={'{'}2025{'}'}
 {'}'}
 </code></pre>
@@ -655,7 +684,7 @@ for article in dataset["train"]:
 			</p>
 
 			<p>
-				PAARI's mission to document and preserve stories from rural India has created a unique
+				PARI's mission to document and preserve stories from rural India has created a unique
 				resource that not only serves journalism but also enables AI research and development for
 				underrepresented languages and communities.
 			</p>

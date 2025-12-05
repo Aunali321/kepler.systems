@@ -4,14 +4,6 @@
 
 	const posts = [
 		{
-			title: 'Introducing Curated PAARI Datasets: 8 Indian Languages for AI Research',
-			date: 'November 26, 2025',
-			category: 'Datasets',
-			excerpt:
-				"Curated journalism datasets from the People's Archive of Rural India across 8 Indian languages, ready for AI research and language modeling.",
-			slug: 'introducing-paari-datasets'
-		},
-		{
 			title: 'The Challenge of Building Multilingual AI',
 			date: 'November 26, 2025',
 			category: 'Research',

@@ -60,48 +60,9 @@
 		<div class="section-header">
 			<span class="section-label">Open Research</span>
 			<h2>Datasets & Models</h2>
-			<p class="subtitle">Latest: Multilingual Rural India Journalism Datasets</p>
 		</div>
 
 		<div class="products-grid">
-			<div class="product-card featured">
-				<div class="product-content">
-					<div class="product-icon">🌾</div>
-					<h3>PAARI Datasets</h3>
-					<p>
-						Multilingual journalism datasets from the People's Archive of Rural India covering rural life and culture.
-					</p>
-					<ul class="feature-list">
-						<li>8 Indian languages: Hindi, Urdu, Punjabi, Tamil, Telugu, Marathi, Gujarati, English</li>
-						<li>7,650 professional journalism articles</li>
-						<li>19.9M tokens with language-specific text normalization</li>
-						<li>Parquet format, ready for text generation and classification</li>
-					</ul>
-					<div class="tags">
-						<Chip name="Dataset" />
-						<Chip name="Multilingual" />
-						<Chip name="Open Access" />
-					</div>
-					<a href="/blog/introducing-paari-datasets" class="hf-link">
-						Read more →
-					</a>
-				</div>
-				<div class="product-stats">
-					<div class="stat">
-						<span class="value">8</span>
-						<span class="label">Languages</span>
-					</div>
-					<div class="stat">
-						<span class="value">7.6K</span>
-						<span class="label">Articles</span>
-					</div>
-					<div class="stat">
-						<span class="value">19.9M</span>
-						<span class="label">Tokens</span>
-					</div>
-				</div>
-			</div>
-
 			<div class="product-card featured">
 				<div class="product-content">
 					<div class="product-icon">🤖</div>
